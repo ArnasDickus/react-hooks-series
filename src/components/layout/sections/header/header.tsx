@@ -2,11 +2,12 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components';
 import Link from 'next/link'
 import { navLinks } from './nav-links/nav-links';
+import { LargeWrapper } from '@components/wrappers';
 
 const Header = () => {
   return (
     <ContainerHeader>
-      <div className="wrapper">
+      <LargeWrapper>
         <div>
           <Link href="/">
             <h1 className="title">React Hooks Tutorial</h1>
@@ -27,7 +28,7 @@ const Header = () => {
             }
           </ul>
         </nav>
-      </div>
+      </LargeWrapper>
     </ContainerHeader>
   )
 }
@@ -49,16 +50,6 @@ const ContainerHeader = styled.header`
     }
   }
 
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-right: auto;
-    margin-left:  auto;
-    max-width: 960px;
-    padding-right: 10px;
-    padding-left:  10px;
-  }
   .nav {
     display: flex;
     align-items: center;
