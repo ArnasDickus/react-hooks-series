@@ -33,8 +33,8 @@ const UseStatePage = () => {
           // setIncrementData((prevState) => { ...prevState, increment: increment + 1, history: increment + 1})
           setIncrementData(prevState => ({
             ...prevState,
-            increment: incrementData?.increment + 1,
-            history:  [...prevState?.history, increment + 1]
+            increment: incrementData.increment + 1,
+            history:  [...prevState.history, increment + 1]
          }));
            incrementNumber += 1;
           console.log('incrementNumber', incrementNumber);
