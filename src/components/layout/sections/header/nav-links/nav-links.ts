@@ -11,5 +11,10 @@ export const navLinks: INavLinks[] = [
         display: true,
         routeName: 'State Hook',
         routeLink: routes['use-state']
-    }
+    },
+    {
+        display: true,
+        routeName: 'Use Reducer',
+        routeLink: routes['use-reducer']
+    },
 ]

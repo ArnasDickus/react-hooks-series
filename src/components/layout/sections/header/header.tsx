@@ -14,7 +14,7 @@ const Header = () => {
           </Link>
         </div>
         <nav className="nav">
-          <ul>
+          <ul className="ul">
             {
               navLinks.map((link, index) => {
                 return (
@@ -53,6 +53,11 @@ const ContainerHeader = styled.header`
   .nav {
     display: flex;
     align-items: center;
+  }
+  
+  .ul {
+    display: flex;
+    gap: 10px;
   }
 
   .link {
