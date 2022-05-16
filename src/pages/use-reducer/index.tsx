@@ -4,19 +4,20 @@ import { IHeadSeo } from '@shared/interfaces'
 import React, { useReducer, useState } from 'react'
 import styled from 'styled-components';
 
-interface IincrementData {
-  increment: number;
-  history: number[];
-}
 
-const reducer = (state, action) => {
-    switch(action.type) {
-        case "INCREMENT": 
-        return {count: state.count =+ 1, ...state}
-        
-    }
-}
-
+  type State = {
+    value: number;
+  }
+  
+  const initialCounterState: State = {
+    value: 0
+  }
+  
+  type Action = {
+    type: 'INCREASE' | 'DECREASE' | 'RESET',
+    payload: number
+  }
+  
 const UseReducerPage = () => {
   const headSeoData: IHeadSeo = {
     title: "Use State Page",
@@ -24,22 +25,63 @@ const UseReducerPage = () => {
     description: "Training for useState hook"
   }
 
-  const [count, setCount] = useState(0);
-  const [showText, setShowText] = useState(false);
-  const [state, dispatch] = useReducer(reducer, {count: 0, showText: false});
+  const counterReducer = (state: State, action: Action): State => {
+    const {type, payload} = action;
+    switch (type) {
+      case 'INCREASE':
+      return {
+          ...state, 
+          value: state.value + payload
+        }
+      case 'DECREASE':
+        return {
+          ...state, 
+          value: state.value - payload
+        }
+      case 'RESET': 
+        return initialCounterState
+      default:
+        return state;
+    }
+  }
+
+  const [
+    state, 
+    dispatch
+  ] = useReducer(counterReducer, initialCounterState);
+  
   return (
     <Layout headSeoData={headSeoData}>
       <ContainerUseReducerPage>
           <div className="wrapper">
-          <h1>{count}</h1>
+          Count: {state.value}
+          <button onClick={() => dispatch({
+              type: 'DECREASE',
+              payload: 1
+          })}>
+            -
+          </button>
+          <button onClick={() => dispatch({
+             type: 'INCREASE',
+             payload: 1
+          })}>
+            +
+          </button>
+          <button onClick={() => dispatch({
+             type: 'RESET',
+             payload: 1
+          })}>
+            Reset
+          </button>
+          {/* <h1>{count}</h1>
           <button onClick={() => {
-              setCount(count + 1);
-              setShowText(!showText);
-          }}>Increment</button>
-            </div>
+              // setCount(count + 1);
+              // setShowText(!showText);
+          }}>Increment</button> */}
+          </div>
        
      
-      {showText ? <p className="text">This is a text</p> : null}
+      {/* {showText ? <p className="text">This is a text</p> : null} */}
       </ContainerUseReducerPage>
     </Layout>
   )
