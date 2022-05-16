@@ -17,4 +17,9 @@ export const navLinks: INavLinks[] = [
         routeName: 'Use Reducer',
         routeLink: routes['use-reducer']
     },
+    {
+        display: true,
+        routeName: 'Use Effect',
+        routeLink: routes['use-effect']
+    },
 ]
