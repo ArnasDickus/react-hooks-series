@@ -11,6 +11,8 @@ const UseRef = () => {
     content: "Use State hooks",
     description: "Training for useState hook"
   }
+    // According to netflix useRef should be avoided at all.
+    // https://youtu.be/kDARP5QZ6nU?t=682
   const inputRef = useRef<HTMLInputElement>(null);
   const onClick = () => {
       if(inputRef) {

@@ -27,4 +27,9 @@ export const navLinks: INavLinks[] = [
         routeName: 'Use Ref',
         routeLink: routes['use-ref']
     },
+    {
+        display: true,
+        routeName: 'Use Layout Effect',
+        routeLink: routes['use-layout-effect']
+    },
 ]
