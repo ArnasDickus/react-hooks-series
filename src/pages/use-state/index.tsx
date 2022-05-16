@@ -21,6 +21,7 @@ const UseStatePage = () => {
       increment: 0,
       history: []
     })
+    
     let incrementNumber = 0
     console.log('incrementData', incrementData);
 

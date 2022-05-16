@@ -22,4 +22,9 @@ export const navLinks: INavLinks[] = [
         routeName: 'Use Effect',
         routeLink: routes['use-effect']
     },
+    {
+        display: true,
+        routeName: 'Use Ref',
+        routeLink: routes['use-ref']
+    },
 ]

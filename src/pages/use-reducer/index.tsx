@@ -49,6 +49,8 @@ const UseReducerPage = () => {
     state, 
     dispatch
   ] = useReducer(counterReducer, initialCounterState);
+
+  const [_ignored, forceUpdate] = useReducer(x => x + 1, 0);
   
   return (
     <Layout headSeoData={headSeoData}>
@@ -79,6 +81,7 @@ const UseReducerPage = () => {
               // setShowText(!showText);
           }}>Increment</button> */}
           </div>
+          <button onClick={() =>  forceUpdate()}>Force Update not recommendted</button>
        
      
       {/* {showText ? <p className="text">This is a text</p> : null} */}

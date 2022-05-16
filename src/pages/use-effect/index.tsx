@@ -16,7 +16,7 @@ const useEffectPage = () => {
   const [data, setData] = useState("");
 
   const getData = async () => {
-    await axios.get("https://jsonplaceholder.typicode.com/comments").then((response) => {
+    await axios.get("https://jsonplaceholder.typicode.com/posts/1/comments").then((response) => {
       setData(response?.data?.[0]?.email);
       console.log('response', response?.data);
     })
