@@ -7,5 +7,6 @@ export const routes = {
     'use-layout-effect': '/use-layout-effect',
     'use-imperative-handle': '/use-imperative-handle',
     'use-context': '/use-context',
-    'use-memo': '/use-memo'
+    'use-memo': '/use-memo',
+    'use-callback': '/use-callback'
 }

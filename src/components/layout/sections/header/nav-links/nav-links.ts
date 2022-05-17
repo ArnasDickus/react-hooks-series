@@ -47,4 +47,9 @@ export const navLinks: INavLinks[] = [
         routeName: 'Use Memo Hook',
         routeLink: routes['use-memo']
     },
+    {
+        display: true,
+        routeName: 'Use Callback Hook',
+        routeLink: routes['use-callback']
+    },
 ]
