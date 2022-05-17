@@ -37,4 +37,9 @@ export const navLinks: INavLinks[] = [
         routeName: 'Use Imperative Handle',
         routeLink: routes['use-imperative-handle']
     },
+    {
+        display: true,
+        routeName: 'Use Context Hook',
+        routeLink: routes['use-context']
+    },
 ]
