@@ -4,5 +4,6 @@ export const routes = {
     'use-reducer': '/use-reducer',
     'use-effect': '/use-effect',
     'use-ref': '/use-ref',
-    'use-layout-effect': '/use-layout-effect'
+    'use-layout-effect': '/use-layout-effect',
+    'use-imperative-handle': '/use-imperative-handle'
 }

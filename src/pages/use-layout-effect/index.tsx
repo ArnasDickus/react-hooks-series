@@ -1,5 +1,6 @@
 
 import Layout from '@components/layout/layout'
+import WebDevExample from '@components/use-layout-effect/web-dev-example';
 import { IHeadSeo } from '@shared/interfaces'
 import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import styled from 'styled-components';
@@ -29,7 +30,7 @@ const useLayoutEffectPage = () => {
         <div className="wrapper">
         <input ref={inputRef} value="Pedro"/>
         </div>
-
+      <WebDevExample />
       </ContainerUseLayoutEffectPage>
     </Layout>
   )

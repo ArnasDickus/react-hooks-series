@@ -32,4 +32,9 @@ export const navLinks: INavLinks[] = [
         routeName: 'Use Layout Effect',
         routeLink: routes['use-layout-effect']
     },
+    {
+        display: true,
+        routeName: 'Use Imperative Handle',
+        routeLink: routes['use-imperative-handle']
+    },
 ]
