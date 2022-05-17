@@ -42,4 +42,9 @@ export const navLinks: INavLinks[] = [
         routeName: 'Use Context Hook',
         routeLink: routes['use-context']
     },
+    {
+        display: true,
+        routeName: 'Use Memo Hook',
+        routeLink: routes['use-memo']
+    },
 ]

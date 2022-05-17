@@ -6,5 +6,6 @@ export const routes = {
     'use-ref': '/use-ref',
     'use-layout-effect': '/use-layout-effect',
     'use-imperative-handle': '/use-imperative-handle',
-    'use-context': '/use-context'
+    'use-context': '/use-context',
+    'use-memo': '/use-memo'
 }
